@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AuditLogEntry",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique audit log ID"
+    },
+    "action": {
+      "type": "string",
+      "description": "Action performed"
+    },
+    "actor": {
+      "type": "string",
+      "description": "Entity or user triggering the action"
+    },
+    "resource_id": {
+      "type": "string",
+      "description": "Target resource ID"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "action", "actor", "resource_id", "created_at"]
+}

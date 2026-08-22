@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TransactionEvent",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique transaction event ID"
+    },
+    "payment_id": {
+      "type": "string",
+      "description": "Razorpay payment ID"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Amount in currency subunit (e.g. paise)"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["created", "authorized", "captured", "failed", "refunded"]
+    },
+    "error_code": {
+      "type": ["string", "null"]
+    },
+    "error_description": {
+      "type": ["string", "null"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "payment_id", "amount", "currency", "status", "timestamp"]
+}
