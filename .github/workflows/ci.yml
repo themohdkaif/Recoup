@@ -26,6 +26,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r backend/requirements.txt
 
+      - name: Seed database & run evaluation pipeline
+        env:
+          PYTHONPATH: backend
+        run: |
+          python backend/scripts/seed.py
+
       - name: Run pytest test suite
         env:
           PYTHONPATH: backend
