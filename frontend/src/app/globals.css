@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #F7F5F0;
+  --paper-band: #E8EDE4;
+  --ink: #1A2130;
+  --ink-muted: #6B7280;
+  --rule: #C9C2B4;
+  --rule-dark: #A89F8D;
+  
+  --stamp-approved: #2F6B4F;
+  --stamp-hardstop: #9E2319;
+  --stamp-caution: #B8823D;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-paper: var(--paper);
+  --color-paper-band: var(--paper-band);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-rule: var(--rule);
+  --color-rule-dark: var(--rule-dark);
+  --color-stamp-approved: var(--stamp-approved);
+  --color-stamp-hardstop: var(--stamp-hardstop);
+  --color-stamp-caution: var(--stamp-caution);
+
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", "Courier Prime", monospace;
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Serif font for display headlines and major ledger titles */
+.font-serif {
+  font-family: var(--font-fraunces), Georgia, serif !important;
+}
+
+/* Strict Monospace typography for all financial data, metrics, IDs, and timestamps */
+.font-mono,
+.tabular-nums,
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-ibm-plex-mono), "IBM Plex Mono", "Courier Prime", monospace !important;
+  font-variant-numeric: tabular-nums !important;
+  font-feature-settings: "tnum" 1 !important;
+}
+
+.font-sans {
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Letterpress text-shadow effect for Title Plates */
+.letterpress {
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.9), -0.5px -0.5px 0px rgba(26, 33, 48, 0.15);
+}
+
+/* Double-rule ledger border utility */
+.border-double-rule {
+  border-bottom: 3px double var(--rule);
+}
+
+/* Aged paper scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rule-dark);
+}
+
+/* Continuous smooth horizontal marquee ticker (Slow, comfortable reading pace ~35px/s) */
+@keyframes tickerMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-ticker {
+  display: inline-flex;
+  width: max-content;
+  will-change: transform;
+  animation: tickerMarquee 115s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker {
+    animation: none !important;
+  }
 }

@@ -24,11 +24,20 @@ venv.bak/
 
 # SQLite & databases
 *.db
+*.db-journal
+*.db-shm
+*.db-wal
 *.sqlite3
 *.sqlite
 
+# Testing & Caches
+.pytest_cache/
+.coverage
+htmlcov/
+
 # Environment variables
 .env
+.env.*
 .env*.local
 !.env.example
 
@@ -48,3 +57,9 @@ pnpm-debug.log*
 .vscode/
 *.swp
 *.swo
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+node_modules/

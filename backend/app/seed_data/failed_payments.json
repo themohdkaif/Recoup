@@ -1,0 +1,1142 @@
+[
+  {
+    "transaction_id": "txn_a5224e7e5295464094baf4b30e700f41",
+    "customer_id": "cust_06c00fa2",
+    "amount": 12999.0,
+    "currency": "INR",
+    "failure_reason_code": "risk_check_failed",
+    "gateway_message": "Risk engine velocity score 94: High fraud risk pattern flagged",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-20T23:07:41.977513",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 12,
+    "ground_truth_root_cause": "risk_flagged"
+  },
+  {
+    "transaction_id": "txn_acadf9e992394723b6dd797392eb82fd",
+    "customer_id": "cust_ae6d613c",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "risk_check_failed",
+    "gateway_message": "Risk engine velocity score 94: High fraud risk pattern flagged",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-22T09:18:51.977534",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 13,
+    "ground_truth_root_cause": "risk_flagged"
+  },
+  {
+    "transaction_id": "txn_05a56cce7a264d7d92238e899e458191",
+    "customer_id": "cust_0fb55972",
+    "amount": 7499.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Card verification failed (14): Invalid card number or checksum",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-28T04:26:35.977546",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": false,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 18,
+    "ground_truth_root_cause": "card_issue"
+  },
+  {
+    "transaction_id": "txn_e855fcb311284694b4464be0f64e34c5",
+    "customer_id": "cust_1bb28894",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-28T10:43:40.977558",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 15,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_01f1b4de64bf49a8877026eda455575e",
+    "customer_id": "cust_1b16f9be",
+    "amount": 999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Issuer switch 91: timeout awaiting balance check confirmation",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-27T11:59:54.977568",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 18,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_e7e6d93628304c059b8e3ab8e33513bf",
+    "customer_id": "cust_1bb28894",
+    "amount": 39999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-22T23:23:22.977579",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 15,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_d1087e2d08af4745817198f92ea3ebe8",
+    "customer_id": "cust_dd21a1a5",
+    "amount": 4999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "wallet",
+    "attempt_number": 1,
+    "created_at": "2026-08-20T23:11:58.977589",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 2,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_cec8965bf1ed42d68da05c3bcdc40881",
+    "customer_id": "cust_d6b79599",
+    "amount": 2499.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-27T10:19:07.977600",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 11,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_7bb8d711d50e4f16acd6e39dcbc57bfb",
+    "customer_id": "cust_a7a36ffc",
+    "amount": 1499.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-25T11:30:01.977610",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 4,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_5166e9874b454c36a1d240f93cac6e8c",
+    "customer_id": "cust_9d28acff",
+    "amount": 249.0,
+    "currency": "INR",
+    "failure_reason_code": "network_error",
+    "gateway_message": "Connection reset by acquiring server during bank authorization",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-27T11:55:14.977620",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 9,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_740051f18de8472fa3e769a4aef8840f",
+    "customer_id": "cust_67da37b6",
+    "amount": 2499.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Card verification failed (14): Invalid card number or checksum",
+    "payment_method": "wallet",
+    "attempt_number": 1,
+    "created_at": "2026-08-17T13:37:51.977630",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 12,
+    "ground_truth_root_cause": "card_issue"
+  },
+  {
+    "transaction_id": "txn_bb397893844a42be83c7082a6a8431c1",
+    "customer_id": "cust_5642f999",
+    "amount": 1499.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Card verification failed (14): Invalid card number or checksum",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-23T08:55:59.977640",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 16,
+    "ground_truth_root_cause": "card_issue"
+  },
+  {
+    "transaction_id": "txn_5c612e082478423cb918d85d78459655",
+    "customer_id": "cust_47444211",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-23T12:50:20.977651",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 4,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_b5c6fae093aa495bba3d1ac9fa036148",
+    "customer_id": "cust_a067cc08",
+    "amount": 45000.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-17T12:57:31.977661",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 18,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_9d641e411a2348b4a0c97c71d315563a",
+    "customer_id": "cust_1131977a",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "High value transfer authorization challenged and interrupted",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-25T21:31:49.977671",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 5,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_8258bb49d6594f0596f794e485f84fe6",
+    "customer_id": "cust_1ff438a4",
+    "amount": 3499.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-26T08:45:27.977681",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 11,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_e54a6bc058714a5e8bff4e207b03a095",
+    "customer_id": "cust_4ddaa08c",
+    "amount": 8999.0,
+    "currency": "INR",
+    "failure_reason_code": "network_error",
+    "gateway_message": "Socket drop during 3DS verification handshake with card network",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-17T17:36:41.977692",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 19,
+    "ground_truth_root_cause": "network_issue"
+  },
+  {
+    "transaction_id": "txn_4d578ff347214b1c9024fb40c6e2a453",
+    "customer_id": "cust_58e62899",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-28T13:15:14.977702",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 2,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_6e778799db08439b8d302ad74946bed8",
+    "customer_id": "cust_0fb55972",
+    "amount": 999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-19T17:41:31.977718",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 0,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_9dc806a386d245a0b7f276b025f98f8e",
+    "customer_id": "cust_06c00fa2",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Payload truncated during network transmission",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-19T04:21:22.977729",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 9,
+    "ground_truth_root_cause": "network_issue"
+  },
+  {
+    "transaction_id": "txn_b41a2ad69e134c17abb91a5961441b33",
+    "customer_id": "cust_4cdec1f0",
+    "amount": 29999.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Card verification failed (14): Invalid card number or checksum",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-18T04:23:57.977739",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 1,
+    "ground_truth_root_cause": "card_issue"
+  },
+  {
+    "transaction_id": "txn_cbd03507294a4175b80607827cdcc98b",
+    "customer_id": "cust_62371f71",
+    "amount": 39999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-18T00:55:59.977749",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 4,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_0f2af698300c4783b165834563bbf5cf",
+    "customer_id": "cust_44fdf2f7",
+    "amount": 999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-27T23:37:45.977759",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 6,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_a7cb7a8af84c4f63b681812404fcb897",
+    "customer_id": "cust_47444211",
+    "amount": 8999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-22T07:51:28.977769",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 12,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_3fa8e7fff2d64b6db58823ec36efe6c7",
+    "customer_id": "cust_681be978",
+    "amount": 12999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Issuer switch 91: timeout awaiting balance check confirmation",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-18T23:49:01.977779",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 11,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_294dd466cac34f4b93ec40125315036b",
+    "customer_id": "cust_f87b8e1a",
+    "amount": 7499.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-25T11:29:29.977789",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 12,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_14420c90bc7942ab85a3ab5c906ea724",
+    "customer_id": "cust_397fb1ae",
+    "amount": 1499.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-21T06:59:32.977799",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 2,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_787eee181a034bb6b249370990f2a2ac",
+    "customer_id": "cust_dbe4c801",
+    "amount": 299.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-18T09:08:43.977809",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 6,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_146210663bc149a9a7218deb3f7c86a2",
+    "customer_id": "cust_58e62899",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Card verification failed (14): Invalid card number or checksum",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-17T05:15:36.977819",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 8,
+    "ground_truth_root_cause": "card_issue"
+  },
+  {
+    "transaction_id": "txn_5b5064c00512426c95502c79baa55e86",
+    "customer_id": "cust_58e62899",
+    "amount": 999.0,
+    "currency": "INR",
+    "failure_reason_code": "network_error",
+    "gateway_message": "Connection reset by acquiring server during bank authorization",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-28T11:38:42.977829",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 10,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_6241ac03136f4f2b9ecd0d7c2872a322",
+    "customer_id": "cust_dbe4c801",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-23T09:24:36.977839",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 5,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_43bf9be159a64ed7a6e149c1de92dc42",
+    "customer_id": "cust_a067cc08",
+    "amount": 1299.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "wallet",
+    "attempt_number": 1,
+    "created_at": "2026-08-28T19:49:08.977849",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 5,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_dfb7e09f6a88426aab83c3c865b61500",
+    "customer_id": "cust_a7a36ffc",
+    "amount": 22499.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Card verification failed (14): Invalid card number or checksum",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-29T01:24:40.977862",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 7,
+    "ground_truth_root_cause": "card_issue"
+  },
+  {
+    "transaction_id": "txn_b8133093ee46471bbcbebdf3f45ec6c0",
+    "customer_id": "cust_cca331da",
+    "amount": 499.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-21T07:28:33.977873",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 1,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_068ab3b59d7b44e2a7eb25c36af1f055",
+    "customer_id": "cust_237a7cdd",
+    "amount": 199.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "High value transfer authorization challenged and interrupted",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-25T09:30:46.977926",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 12,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_5dcc9f2f100044a2aa1165bdddd5d711",
+    "customer_id": "cust_2e0d233f",
+    "amount": 3499.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-27T07:44:58.977937",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 2,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_2b9204632b5645368df2b7dc6e419f74",
+    "customer_id": "cust_1131977a",
+    "amount": 1499.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Card verification failed (14): Invalid card number or checksum",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-20T04:26:45.977948",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 5,
+    "ground_truth_root_cause": "card_issue"
+  },
+  {
+    "transaction_id": "txn_dfecab5d522e485fb2f48bc4ee5e9b89",
+    "customer_id": "cust_0c6c138c",
+    "amount": 45000.0,
+    "currency": "INR",
+    "failure_reason_code": "risk_check_failed",
+    "gateway_message": "Risk engine velocity score 94: High fraud risk pattern flagged",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-26T20:04:52.977958",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 17,
+    "ground_truth_root_cause": "risk_flagged"
+  },
+  {
+    "transaction_id": "txn_fe4987fb1db843a49e5330bf9573e1e3",
+    "customer_id": "cust_0fb55972",
+    "amount": 8999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-23T01:08:23.977968",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 9,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_0f9c3526d16d4695b26b5a82cea9cf61",
+    "customer_id": "cust_594a164f",
+    "amount": 999.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Payload truncated during network transmission",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-30T03:01:44.977978",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 16,
+    "ground_truth_root_cause": "network_issue"
+  },
+  {
+    "transaction_id": "txn_47b8b007bba148768b542ccf85d1f7c4",
+    "customer_id": "cust_681be978",
+    "amount": 3499.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Card verification failed (14): Invalid card number or checksum",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-21T14:43:18.977988",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": false,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 19,
+    "ground_truth_root_cause": "card_issue"
+  },
+  {
+    "transaction_id": "txn_12148ee761b946b693ce2de3d0cb637a",
+    "customer_id": "cust_62371f71",
+    "amount": 4999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-19T13:30:55.977998",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 5,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_4cfe64ac97034d29bc2eb518597d4ce5",
+    "customer_id": "cust_1131977a",
+    "amount": 7499.0,
+    "currency": "INR",
+    "failure_reason_code": "network_error",
+    "gateway_message": "Socket drop during 3DS verification handshake with card network",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-17T23:49:39.978008",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 14,
+    "ground_truth_root_cause": "network_issue"
+  },
+  {
+    "transaction_id": "txn_692668cbf6514a149f8ceed1b136144b",
+    "customer_id": "cust_5642f999",
+    "amount": 2499.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-28T21:50:41.978022",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 16,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_b8152dd7eccf4b5fbfedd4d6de3948f7",
+    "customer_id": "cust_805f8dc6",
+    "amount": 4999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Issuer switch 91: timeout awaiting balance check confirmation",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-29T11:26:52.978034",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 2,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_af615bb3880e45dda1460d965c12975e",
+    "customer_id": "cust_dd21a1a5",
+    "amount": 1299.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "wallet",
+    "attempt_number": 1,
+    "created_at": "2026-08-20T21:33:19.978048",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": false,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 9,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_c8d5f5ff7b3c4cc8b37b64f0d26dc948",
+    "customer_id": "cust_0c6c138c",
+    "amount": 1499.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-21T11:09:14.978060",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": false,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 13,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_5863ed0ef71041249dbdc493408711a4",
+    "customer_id": "cust_1b16f9be",
+    "amount": 1499.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-28T07:39:47.978071",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": false,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 15,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_982691461e0a432db56eed1745c8585e",
+    "customer_id": "cust_231e0eae",
+    "amount": 1299.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-27T22:27:50.978083",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 12,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_ba7865bb538141748d2535e54dc00acd",
+    "customer_id": "cust_681be978",
+    "amount": 24999.0,
+    "currency": "INR",
+    "failure_reason_code": "network_error",
+    "gateway_message": "Connection reset by acquiring server during bank authorization",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-20T21:25:49.978093",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 15,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_175be2bfe4394381af76990c354c5045",
+    "customer_id": "cust_a7a36ffc",
+    "amount": 24999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-28T05:37:00.978103",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 12,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_a61f47afc475458aa5190a15efefd0dd",
+    "customer_id": "cust_dbf493f1",
+    "amount": 499.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-23T09:55:47.978113",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 8,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_7f63c55347444a1ebe099b73260b3233",
+    "customer_id": "cust_88a7b451",
+    "amount": 22499.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-24T09:58:04.978123",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 11,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_670bc9e887f6408783d34cde59b5872c",
+    "customer_id": "cust_594a164f",
+    "amount": 299.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-28T16:33:11.978133",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 8,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_7cbcc8fa3ce04405b18f23bd03690326",
+    "customer_id": "cust_237a7cdd",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "High value transfer authorization challenged and interrupted",
+    "payment_method": "netbanking",
+    "attempt_number": 1,
+    "created_at": "2026-08-16T13:48:16.978143",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 7,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_b5b32c9fbb1a4ae0ac2d86d47d8ff4b4",
+    "customer_id": "cust_44fdf2f7",
+    "amount": 1999.0,
+    "currency": "INR",
+    "failure_reason_code": "GATEWAY_ERROR",
+    "gateway_message": "Bank switch timeout (91): Issuer gateway did not respond within 30s",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-23T14:19:23.978153",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 19,
+    "ground_truth_root_cause": "bank_timeout"
+  },
+  {
+    "transaction_id": "txn_b5d5f57fc7454197a37f6abb9ba4fa5f",
+    "customer_id": "cust_1bca4a07",
+    "amount": 22499.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Card verification failed (14): Invalid card number or checksum",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-29T08:22:22.978163",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 2,
+    "ground_truth_root_cause": "card_issue"
+  },
+  {
+    "transaction_id": "txn_eb424dc431234a5b94c702a540299704",
+    "customer_id": "cust_0fb55972",
+    "amount": 18999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-27T11:02:26.978172",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": true,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 19,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_53a89ee243c84d518e473d879ccf09bc",
+    "customer_id": "cust_4ddaa08c",
+    "amount": 8999.0,
+    "currency": "INR",
+    "failure_reason_code": "insufficient_funds",
+    "gateway_message": "Declined by issuer (51): Insufficient funds in account",
+    "payment_method": "card",
+    "attempt_number": 1,
+    "created_at": "2026-08-25T13:18:30.978182",
+    "customer_contact_prefs": {
+      "allow_sms": true,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 9,
+    "ground_truth_root_cause": "insufficient_funds"
+  },
+  {
+    "transaction_id": "txn_950d6015e15e47b0a56863621757dc18",
+    "customer_id": "cust_d6b79599",
+    "amount": 249.0,
+    "currency": "INR",
+    "failure_reason_code": "BAD_REQUEST_ERROR",
+    "gateway_message": "Payload truncated during network transmission",
+    "payment_method": "upi",
+    "attempt_number": 1,
+    "created_at": "2026-08-21T02:41:16.978192",
+    "customer_contact_prefs": {
+      "allow_sms": false,
+      "allow_email": true,
+      "allow_call": false,
+      "quiet_hours": "22:00-08:00"
+    },
+    "previous_successful_payments": 11,
+    "ground_truth_root_cause": "network_issue"
+  }
+]

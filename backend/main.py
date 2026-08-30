@@ -1,8 +1,3 @@
-from fastapi import FastAPI
+from app.main import app
 
-app = FastAPI(title="Recoup Backend", version="0.1.0")
-
-
-@app.get("/health")
-def health_check():
-    return {"status": "ok"}
+__all__ = ["app"]

@@ -1,20 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import { AppShell } from "@/components/AppShell";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Recoup",
-  description: "AI-orchestrated revenue recovery engine",
+  title: "Recoup — Revenue Recovery Ledger",
+  description: "Autonomous capital recovery and ledger telemetry system",
 };
 
 export default function RootLayout({
@@ -23,11 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+        className={`${fraunces.variable} ${ibmPlexMono.variable} ${inter.variable} antialiased bg-[#F7F5F0] text-[#1A2130] selection:bg-[#E8EDE4] selection:text-[#1A2130] min-h-screen`}
       >
-        {children}
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );

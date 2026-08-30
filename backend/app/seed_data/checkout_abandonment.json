@@ -1,0 +1,137 @@
+[
+  {
+    "session_id": "sess_bddd5efc56fb",
+    "customer_id": "cust_a47f7cf5",
+    "cart_value": 199.0,
+    "items_count": 1,
+    "abandoned_at_step": "otp_verification",
+    "timestamp": "2026-08-26T15:55:37.978211",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_d95ff937a430",
+    "customer_id": "cust_7ac5e465",
+    "cart_value": 249.0,
+    "items_count": 5,
+    "abandoned_at_step": "payment_method",
+    "timestamp": "2026-08-28T18:22:20.978221",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_1aeffe35c67c",
+    "customer_id": "cust_1a5c6b73",
+    "cart_value": 12999.0,
+    "items_count": 3,
+    "abandoned_at_step": "payment_method",
+    "timestamp": "2026-08-28T13:42:51.978230",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_609d1503fbad",
+    "customer_id": "cust_4c82fd7d",
+    "cart_value": 799.0,
+    "items_count": 1,
+    "abandoned_at_step": "shipping_info",
+    "timestamp": "2026-08-22T18:35:22.978239",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_5eff0891969f",
+    "customer_id": "cust_cfad25fa",
+    "cart_value": 18999.0,
+    "items_count": 2,
+    "abandoned_at_step": "payment_method",
+    "timestamp": "2026-08-17T13:33:01.978249",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_72fa0d3466b3",
+    "customer_id": "cust_528159e8",
+    "cart_value": 7499.0,
+    "items_count": 5,
+    "abandoned_at_step": "payment_method",
+    "timestamp": "2026-08-28T11:16:48.978263",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_a329dcd804ec",
+    "customer_id": "cust_e6ba50eb",
+    "cart_value": 2499.0,
+    "items_count": 1,
+    "abandoned_at_step": "otp_verification",
+    "timestamp": "2026-08-28T11:14:37.978274",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_5631e9874f31",
+    "customer_id": "cust_3d807075",
+    "cart_value": 42999.0,
+    "items_count": 2,
+    "abandoned_at_step": "otp_verification",
+    "timestamp": "2026-08-22T16:26:27.978283",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_fbecc100b6c7",
+    "customer_id": "cust_ca77a7c6",
+    "cart_value": 29999.0,
+    "items_count": 1,
+    "abandoned_at_step": "otp_verification",
+    "timestamp": "2026-08-29T09:55:47.978293",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_65bff0540543",
+    "customer_id": "cust_564f17b7",
+    "cart_value": 45000.0,
+    "items_count": 1,
+    "abandoned_at_step": "payment_method",
+    "timestamp": "2026-08-27T16:03:00.978302",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_ede2f8dc52be",
+    "customer_id": "cust_bc9e6960",
+    "cart_value": 12999.0,
+    "items_count": 5,
+    "abandoned_at_step": "payment_method",
+    "timestamp": "2026-08-26T07:08:50.978312",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_33a5e0cff4be",
+    "customer_id": "cust_cb5dac1d",
+    "cart_value": 7499.0,
+    "items_count": 5,
+    "abandoned_at_step": "review",
+    "timestamp": "2026-08-30T05:09:45.978321",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_c35f19b2138a",
+    "customer_id": "cust_a34e2cda",
+    "cart_value": 799.0,
+    "items_count": 1,
+    "abandoned_at_step": "shipping_info",
+    "timestamp": "2026-08-24T16:58:04.978330",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_e426bacd1939",
+    "customer_id": "cust_ff759900",
+    "cart_value": 39999.0,
+    "items_count": 6,
+    "abandoned_at_step": "otp_verification",
+    "timestamp": "2026-08-27T03:56:42.978340",
+    "recovery_attempted": false
+  },
+  {
+    "session_id": "sess_51d92252779a",
+    "customer_id": "cust_c9af643e",
+    "cart_value": 799.0,
+    "items_count": 5,
+    "abandoned_at_step": "payment_method",
+    "timestamp": "2026-08-26T21:14:42.978349",
+    "recovery_attempted": false
+  }
+]
