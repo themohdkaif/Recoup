@@ -120,7 +120,7 @@ export default function PaymentsPage() {
   }, [payments]);
 
   const filteredPayments = useMemo(() => {
-    let list = payments.filter((p) => {
+    const list = payments.filter((p) => {
       const q = searchQuery.toLowerCase().trim();
       if (!q) return true;
       return (

@@ -1,5 +1,7 @@
 # Recoup: Autonomous Revenue Recovery with Invariant Guardrails
 
+[![CI](https://github.com/themohdkaif/Recoup/actions/workflows/ci.yml/badge.svg)](https://github.com/themohdkaif/Recoup/actions/workflows/ci.yml)
+
 Recoup is an autonomous revenue recovery agent built for the Razorpay ecosystem that detects revenue slipping away across four transaction surfaces, diagnoses the root cause of failure, and executes recovery actions inside strict, deterministic safety guardrails. Built for the Razorpay AI Agents Hackathon, Recoup replaces blunt, indiscriminate retry scripts with an explainable pipeline where language models diagnose failures and deterministic code enforces non-negotiable business rules.
 
 ---

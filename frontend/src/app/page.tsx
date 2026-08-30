@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
@@ -93,6 +93,14 @@ export default function LandingPage() {
     }
   }, []);
 
+  const handleIntroComplete = useCallback(() => {
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("recoup_intro_seen", "true");
+    }
+    setTransitionState("navigating");
+    router.push("/overview");
+  }, [router]);
+
   // Safety fallback guard: if GSAP onComplete does not fire within 4.8s, force navigation
   useEffect(() => {
     if (transitionState === "intro-playing") {
@@ -101,7 +109,7 @@ export default function LandingPage() {
       }, 4800);
       return () => clearTimeout(fallbackTimer);
     }
-  }, [transitionState]);
+  }, [transitionState, handleIntroComplete]);
 
   // Fetch real data from backend (Unified Summary, Counterfactual Summary, and Model Accuracy Benchmark)
   useEffect(() => {
@@ -165,14 +173,6 @@ export default function LandingPage() {
     if (transitionState !== "idle") return; // Strict idempotency guard against multi-clicks
     setTransitionState("intro-playing");
     setIntroKey((k) => k + 1);
-  };
-
-  const handleIntroComplete = () => {
-    if (typeof window !== "undefined") {
-      sessionStorage.setItem("recoup_intro_seen", "true");
-    }
-    setTransitionState("navigating");
-    router.push("/overview");
   };
 
   const isIntroActive = transitionState === "intro-playing" || transitionState === "navigating";
