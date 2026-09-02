@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { AuditDrawer } from "@/components/AuditDrawer";
 import { StampMark } from "@/components/StampMark";
 import { LedgerRow } from "@/components/LedgerRow";
+import { LedgerLoading } from "@/components/LedgerLoading";
 import { DigitRoll } from "@/components/DigitRoll";
 import { RadarRecord } from "@/components/RadarVisualization";
 import { HinglishVoiceNudge } from "@/components/HinglishVoiceNudge";
@@ -220,9 +221,7 @@ export default function CheckoutPage() {
         </div>
 
         {loading ? (
-          <div className="py-16 text-center text-xs font-mono text-[#6B7280]">
-            Fetching checkout abandonment records...
-          </div>
+          <LedgerLoading message="Retrieving checkout abandonment ledger..." rows={5} />
         ) : (
           <div className="border-t-2 border-[#C9C2B4] divide-y divide-[#C9C2B4]">
             {checkouts.map((c, idx) => {

@@ -3,12 +3,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
+import { useLedgerIntro } from "@/context/IntroContext";
 
 interface TopBarProps {
   isLandingPage?: boolean;
 }
 
 export function TopBar({ isLandingPage = false }: TopBarProps) {
+  const { openLedger, transitionState } = useLedgerIntro();
   const [timeUtc, setTimeUtc] = useState<string>("");
   const [timeIst, setTimeIst] = useState<string>("");
 
@@ -63,14 +65,21 @@ export function TopBar({ isLandingPage = false }: TopBarProps) {
         {/* Right: Actions, Wax Seal Status Indicator & Live Ledger Clock */}
         <div className="flex items-center gap-4 font-mono text-xs text-[#1A2130]">
           {isLandingPage ? (
-            <Link
-              href="/overview"
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#2F6B4F] text-white rounded-[2px] hover:bg-[#25543E] transition-all font-bold text-xs shadow-xs active:scale-95 cursor-pointer"
+            <button
+              type="button"
+              onClick={openLedger}
+              disabled={transitionState !== "idle"}
+              aria-busy={transitionState !== "idle"}
+              className={`flex items-center gap-1.5 px-3 py-1.5 bg-[#2F6B4F] text-white rounded-[2px] hover:bg-[#25543E] transition-all font-bold text-xs shadow-xs select-none ${
+                transitionState !== "idle"
+                  ? "opacity-75 cursor-not-allowed pointer-events-none"
+                  : "cursor-pointer active:scale-95"
+              }`}
             >
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>Open Ledger</span>
+              <BookOpen className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <span>{transitionState === "idle" ? "Open Ledger" : "Opening..."}</span>
               <ArrowRight className="w-3 h-3" />
-            </Link>
+            </button>
           ) : (
             <Link
               href="/"

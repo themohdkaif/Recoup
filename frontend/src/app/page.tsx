@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useEffect, useState, useRef, useCallback } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { DigitRoll } from "@/components/DigitRoll";
 import { StampMark } from "@/components/StampMark";
 import { LedgerRow } from "@/components/LedgerRow";
-import { LedgerBookIntro } from "@/components/LedgerBookIntro";
 import { LiveAuditTicker } from "@/components/LiveAuditTicker";
 import {
   BookOpen,
@@ -64,52 +61,15 @@ interface DiagnosisAccuracyData {
   fallback_overall_accuracy_pct?: number;
 }
 
-type TransitionState = "idle" | "intro-playing" | "navigating";
+import { useLedgerIntro } from "@/context/IntroContext";
 
 export default function LandingPage() {
-  const router = useRouter();
-  const [transitionState, setTransitionState] = useState<TransitionState>("idle");
-  const [introKey, setIntroKey] = useState<number>(1);
+  const { openLedger, isIntroActive, transitionState } = useLedgerIntro();
   const [summary, setSummary] = useState<UnifiedSummaryData | null>(null);
   const [cfSummary, setCfSummary] = useState<CounterfactualSummaryData | null>(null);
   const [accuracyData, setAccuracyData] = useState<DiagnosisAccuracyData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  // Prefetch /overview on load so client route transition is instantaneous
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      router.prefetch("/overview");
-    }
-  }, [router]);
-
-  // Auto-trigger intro if ?intro=1 is in URL
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get("intro") === "1" || urlParams.get("intro") === "true") {
-      setIntroKey((k) => k + 1);
-      setTransitionState("intro-playing");
-    }
-  }, []);
-
-  const handleIntroComplete = useCallback(() => {
-    if (typeof window !== "undefined") {
-      sessionStorage.setItem("recoup_intro_seen", "true");
-    }
-    setTransitionState("navigating");
-    router.push("/overview");
-  }, [router]);
-
-  // Safety fallback guard: if GSAP onComplete does not fire within 4.8s, force navigation
-  useEffect(() => {
-    if (transitionState === "intro-playing") {
-      const fallbackTimer = setTimeout(() => {
-        handleIntroComplete();
-      }, 4800);
-      return () => clearTimeout(fallbackTimer);
-    }
-  }, [transitionState, handleIntroComplete]);
 
   // Fetch real data from backend (Unified Summary, Counterfactual Summary, and Model Accuracy Benchmark)
   useEffect(() => {
@@ -170,22 +130,11 @@ export default function LandingPage() {
   );
 
   const handleOpenLedger = () => {
-    if (transitionState !== "idle") return; // Strict idempotency guard against multi-clicks
-    setTransitionState("intro-playing");
-    setIntroKey((k) => k + 1);
+    openLedger();
   };
-
-  const isIntroActive = transitionState === "intro-playing" || transitionState === "navigating";
 
   return (
     <>
-      {/* 3D Ledger Book Intro Sequence (Cleanly remounts with introKey) */}
-      {isIntroActive && (
-        <LedgerBookIntro
-          key={introKey}
-          onComplete={handleIntroComplete}
-        />
-      )}
 
       <div
         ref={containerRef}

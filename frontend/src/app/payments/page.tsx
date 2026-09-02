@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { AuditDrawer } from "@/components/AuditDrawer";
 import { StampMark } from "@/components/StampMark";
 import { LedgerRow } from "@/components/LedgerRow";
+import { LedgerLoading } from "@/components/LedgerLoading";
 import { RadarRecord } from "@/components/RadarVisualization";
 import { HumanActionModal, HumanActionTarget } from "@/components/HumanActionModal";
 import {
@@ -281,9 +282,7 @@ export default function PaymentsPage() {
         </div>
 
         {loading ? (
-          <div className="py-16 text-center text-xs font-mono text-[#6B7280]">
-            Fetching payment records...
-          </div>
+          <LedgerLoading message="Retrieving payment recovery ledger..." rows={6} />
         ) : (
           <div className="border-t-2 border-[#C9C2B4] divide-y divide-[#C9C2B4]">
             {filteredPayments.map((p, idx) => {

@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { DigitRoll } from "@/components/DigitRoll";
 import { StampMark } from "@/components/StampMark";
 import { LedgerRow } from "@/components/LedgerRow";
-import { LedgerBookIntro } from "@/components/LedgerBookIntro";
+import { useLedgerIntro } from "@/context/IntroContext";
 import { ArrowRight, CheckCircle2, Play } from "lucide-react";
 
 interface FlowMetrics {
@@ -110,38 +110,11 @@ interface HumanActionStats {
 }
 
 export default function OverviewPage() {
-  const [showIntro, setShowIntro] = useState<boolean | null>(null);
-  const [introKey, setIntroKey] = useState<number>(1);
+  const { openLedger } = useLedgerIntro();
   const [summary, setSummary] = useState<UnifiedSummaryData>(fallbackSummary);
   const [cfSummary, setCfSummary] = useState<CounterfactualSummaryData | null>(null);
   const [humanStats, setHumanStats] = useState<HumanActionStats | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  // Check intro display policy
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const forceIntro =
-      urlParams.get("intro") === "1" || urlParams.get("intro") === "true";
-    const hasSeen = sessionStorage.getItem("recoup_intro_seen") === "true";
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReduced) {
-      sessionStorage.setItem("recoup_intro_seen", "true");
-      setShowIntro(false);
-    } else if (forceIntro) {
-      setIntroKey((k) => k + 1);
-      setShowIntro(true);
-    } else if (!hasSeen) {
-      setIntroKey((k) => k + 1);
-      setShowIntro(true);
-    } else {
-      setShowIntro(false);
-    }
-  }, []);
 
   useEffect(() => {
     fetch("http://127.0.0.1:8000/api/unified-summary")
@@ -175,8 +148,6 @@ export default function OverviewPage() {
   // GSAP Orchestrated Page-Load Sequence (~0.8-1.2s total)
   useGSAP(
     () => {
-      if (showIntro) return;
-
       const prefersReducedMotion =
         typeof window !== "undefined" &&
         window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -206,24 +177,11 @@ export default function OverviewPage() {
           "-=0.1"
         );
     },
-    { scope: containerRef, dependencies: [showIntro] }
+    { scope: containerRef, dependencies: [] }
   );
 
   return (
     <>
-      {/* 3D Ledger Book Intro Sequence (Cold-Open) */}
-      {showIntro && (
-        <LedgerBookIntro
-          key={introKey}
-          onComplete={() => {
-            if (typeof window !== "undefined") {
-              sessionStorage.setItem("recoup_intro_seen", "true");
-            }
-            setShowIntro(false);
-          }}
-        />
-      )}
-
       <div
         ref={containerRef}
         className="space-y-10 max-w-5xl mx-auto pt-2 pb-16 select-none"
@@ -237,10 +195,7 @@ export default function OverviewPage() {
               </h1>
               <div className="flex items-center gap-3">
                 <button
-                  onClick={() => {
-                    setIntroKey((k) => k + 1);
-                    setShowIntro(true);
-                  }}
+                  onClick={openLedger}
                   className="font-mono text-[10px] text-[#6B7280] hover:text-[#1A2130] transition-colors flex items-center gap-1 border border-[#C9C2B4] px-1.5 py-0.5 rounded-[1px] bg-[#EAE4D9] hover:bg-[#DFD8CC] cursor-pointer"
                   title="Replay 3D Book Intro (?intro=1)"
                 >

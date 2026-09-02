@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { StampMark } from "@/components/StampMark";
 import { DigitRoll } from "@/components/DigitRoll";
+import { LedgerLoading } from "@/components/LedgerLoading";
 import {
   Download,
   Search,
@@ -659,9 +660,7 @@ export default function AuditPage() {
         </div>
 
         {loading ? (
-          <div className="py-20 text-center text-xs font-mono text-[#6B7280]">
-            Streaming journal ledger entries...
-          </div>
+          <LedgerLoading message="Streaming journal ledger entries..." rows={8} />
         ) : filteredLogs.length === 0 ? (
           <div className="py-20 text-center text-xs font-mono text-[#6B7280] space-y-1">
             <FileText className="w-6 h-6 mx-auto opacity-40 mb-2" />

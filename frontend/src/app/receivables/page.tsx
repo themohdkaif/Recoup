@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { AuditDrawer } from "@/components/AuditDrawer";
 import { StampMark } from "@/components/StampMark";
 import { LedgerRow } from "@/components/LedgerRow";
+import { LedgerLoading } from "@/components/LedgerLoading";
 import { DigitRoll } from "@/components/DigitRoll";
 import { RadarRecord } from "@/components/RadarVisualization";
 import { HumanActionModal, HumanActionTarget } from "@/components/HumanActionModal";
@@ -279,9 +280,7 @@ export default function ReceivablesPage() {
         </div>
 
         {loading ? (
-          <div className="py-16 text-center text-xs font-mono text-[#6B7280]">
-            Fetching overdue invoice records...
-          </div>
+          <LedgerLoading message="Retrieving B2B receivables escalation ladder..." rows={6} />
         ) : (
           <div className="space-y-6">
             {/* Ladder Rungs */}

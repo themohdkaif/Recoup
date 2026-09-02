@@ -4,6 +4,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { TopBar } from "./TopBar";
 import { Sidebar } from "./Sidebar";
+import { IntroProvider } from "@/context/IntroContext";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -14,9 +15,10 @@ export function AppShell({ children }: AppShellProps) {
   const isLandingPage = pathname === "/";
 
   return (
-    <div className="min-h-screen bg-[#F7F5F0] text-[#1A2130] flex flex-col font-sans relative">
-      {/* Top Title Plate Header */}
-      <TopBar isLandingPage={isLandingPage} />
+    <IntroProvider>
+      <div className="min-h-screen bg-[#F7F5F0] text-[#1A2130] flex flex-col font-sans relative">
+        {/* Top Title Plate Header */}
+        <TopBar isLandingPage={isLandingPage} />
 
       {/* Main Layout: Full-width for Landing Page, Two-Column for App Pages */}
       {isLandingPage ? (
@@ -44,6 +46,7 @@ export function AppShell({ children }: AppShellProps) {
           </main>
         </div>
       )}
-    </div>
+      </div>
+    </IntroProvider>
   );
 }
